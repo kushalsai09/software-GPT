@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Comprehensive Website Example</title>
+  <!-- Internal CSS for simplicity -->
+  <style>
+    /* Global reset and styling */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: Arial, sans-serif;
+      /* Background image with full viewport coverage */
+      background: url('background.jpg') no-repeat center center fixed;
+      background-size: cover;
+      line-height: 1.6;
+      color: #333;
+    }
+    
+    /* Header styling */
+    header {
+      background: rgba(255, 255, 255, 0.8);
+      padding: 20px;
+      text-align: center;
+    }
+    
+    /* Navigation bar styling */
+    nav {
+      background: rgba(0, 0, 0, 0.7);
+    }
+    
+    nav ul {
+      list-style: none;
+      display: flex;
+      justify-content: center;
+    }
+    
+    nav ul li {
+      margin: 0 15px;
+    }
+    
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 15px;
+      display: block;
+    }
+    
+    nav ul li a:hover {
+      background: #555;
+      border-radius: 5px;
+    }
+    
+    /* Main content areas / sections */
+    main {
+      padding: 20px;
+    }
+    
+    section {
+      background: rgba(255, 255, 255, 0.9);
+      margin: 20px auto;
+      padding: 20px;
+      border-radius: 10px;
+      max-width: 800px;
+    }
+    
+    /* Video section styling */
+    .video-section video {
+      max-width: 100%;
+      height: auto;
+      display: block;
+      margin: 0 auto;
+    }
+    
+    /* Form styling for the contact section */
+    .form-section input[type="text"],
+    .form-section input[type="email"],
+    .form-section textarea {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+    
+    button {
+      padding: 10px 20px;
+      border: none;
+      background: #333;
+      color: #fff;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+    }
+    
+    button:hover {
+      background: #555;
+    }
+    
+    /* Footer styling */
+    footer {
+      background: rgba(0, 0, 0, 0.8);
+      color: #fff;
+      text-align: center;
+      padding: 15px;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header with site title and description -->
+  <header>
+    <h1>Welcome to My Website</h1>
+    <p>A comprehensive website built using HTML, CSS, and JavaScript.</p>
+  </header>
+  
+  <!-- Navigation Bar -->
+  <nav>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#video">Videos</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+  
+  <!-- Main Content -->
+  <main>
+    <!-- Home Section -->
+    <section id="home">
+      <h2>Home</h2>
+      <p>Welcome to our website. Enjoy the stunning background and seamless navigation. This site is designed for clarity and ease of use.</p>
+      <button onclick="sayHello()">Click Me</button>
+    </section>
+    
+    <!-- Video Section -->
+    <section id="video" class="video-section">
+      <h2>Video Section</h2>
+      <video controls>
+        <source src="sample.mp4" type="video/mp4">
+        Your browser does not support HTML5 video.
+      </video>
+      <p>Watch this sample video to learn more about our content.</p>
+    </section>
+    
+    <!-- About Section -->
+    <section id="about">
+      <h2>About Us</h2>
+      <p>This website demonstrates the use of HTML, CSS, and JavaScript to create a responsive and interactive user interface. Every section is carefully designed to provide a cohesive experience.</p>
+    </section>
+    
+    <!-- Contact Section with Form -->
+    <section id="contact" class="form-section">
+      <h2>Contact Us</h2>
+      <form id="contactForm">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your Name">
+        
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your Email">
+        
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" rows="4" placeholder="Your Message"></textarea>
+        
+        <button type="submit">Send Message</button>
+      </form>
+    </section>
+  </main>
+  
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 My Website. All rights reserved.</p>
+  </footer>
+  
+  <!-- JavaScript -->
+  <script>
+    // Function triggered when "Click Me" button is pressed
+    function sayHello() {
+      alert("Hello! Welcome to our website.");
+    }
+    
+    // Handling form submission with JavaScript
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault(); // Prevent the default form submission behavior
+      const name = document.getElementById("name").value;
+      alert("Thank you for your message, " + name + "!");
+      // You could add AJAX submission here if needed
+    });
+  </script>
+</body>
+</html>
